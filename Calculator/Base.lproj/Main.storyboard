@@ -212,7 +212,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <state key="normal" title="."/>
                                                         <connections>
-                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nrh-Ka-0TY"/>
+                                                            <action selector="addFloatingPoint:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gww-W7-B0G"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ool-M9-1ZI">
