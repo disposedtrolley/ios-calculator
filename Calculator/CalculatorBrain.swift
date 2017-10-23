@@ -11,6 +11,7 @@ import Foundation
 struct CalculatorBrain {
     
     private var accumulator: Double?
+    private var loggedSequence: [String] = []
     
     private enum Operation {
         case constant(Double)   // associated value
@@ -35,6 +36,7 @@ struct CalculatorBrain {
     
     mutating func performOperation(_ symbol: String) {
         if let operation = operations[symbol] {
+            logCalculationSequenceItem(symbol)
             switch operation {
             case .constant(let value):
                 accumulator = value
@@ -50,7 +52,7 @@ struct CalculatorBrain {
             case .equals:
                 performPendingBinaryOperation()
             }
-            print(resultIsPending)
+            print(description)
         }
     }
     
@@ -58,6 +60,8 @@ struct CalculatorBrain {
         if pendingBinaryOperation != nil && accumulator != nil {
             accumulator = pendingBinaryOperation!.perform(with: accumulator!)
             pendingBinaryOperation = nil
+            print(description)
+            clearLoggedCalculationSequence()
         }
     }
     
@@ -74,6 +78,15 @@ struct CalculatorBrain {
     
     mutating func setOperand(_ operand: Double) {
         accumulator = operand
+        logCalculationSequenceItem(String(operand))
+    }
+    
+    mutating func logCalculationSequenceItem(_ item: String) {
+        loggedSequence.append(item)
+    }
+    
+    mutating func clearLoggedCalculationSequence() {
+        loggedSequence.removeAll()
     }
     
     var result: Double? {
@@ -85,6 +98,16 @@ struct CalculatorBrain {
     private var resultIsPending: Bool {
         get {
             return pendingBinaryOperation != nil
+        }
+    }
+    
+    private var description: String {
+        get {
+            var sequence = loggedSequence.joined(separator: " ")
+            if resultIsPending {
+                sequence = "\(sequence)  ..."
+            }
+            return sequence
         }
     }
 }
