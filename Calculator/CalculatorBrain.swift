@@ -50,6 +50,7 @@ struct CalculatorBrain {
             case .equals:
                 performPendingBinaryOperation()
             }
+            print(resultIsPending)
         }
     }
     
@@ -78,6 +79,12 @@ struct CalculatorBrain {
     var result: Double? {
         get {
             return accumulator
+        }
+    }
+    
+    private var resultIsPending: Bool {
+        get {
+            return pendingBinaryOperation != nil
         }
     }
 }
