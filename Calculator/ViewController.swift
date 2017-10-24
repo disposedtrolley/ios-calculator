@@ -16,6 +16,11 @@ class ViewController: UIViewController {
     var userIsInTheMiddleOfTyping = false
     var floatingPointPresent = false
     private var brain = CalculatorBrain()
+
+    override func viewDidLoad() {
+        displayValue = 0
+        calculationSequenceValue = " "
+    }
     
     // Computed Properties
     var displayValue: Double {
