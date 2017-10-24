@@ -12,6 +12,7 @@ struct CalculatorBrain {
     
     private var accumulator: Double?
     private var loggedSequence: [String] = []
+    private var lastActionWasEquals = false
     
     private enum Operation {
         case constant(Double)   // associated value
@@ -36,7 +37,9 @@ struct CalculatorBrain {
     
     mutating func performOperation(_ symbol: String) {
         if let operation = operations[symbol] {
-            logCalculationSequenceItem(symbol)
+            
+            updateCalculationSequence(with: symbol)
+            
             switch operation {
             case .constant(let value):
                 accumulator = value
@@ -52,7 +55,6 @@ struct CalculatorBrain {
             case .equals:
                 performPendingBinaryOperation()
             }
-            print(description)
         }
     }
     
@@ -60,8 +62,7 @@ struct CalculatorBrain {
         if pendingBinaryOperation != nil && accumulator != nil {
             accumulator = pendingBinaryOperation!.perform(with: accumulator!)
             pendingBinaryOperation = nil
-            print(description)
-            clearLoggedCalculationSequence()
+            lastActionWasEquals = true
         }
     }
     
@@ -77,15 +78,20 @@ struct CalculatorBrain {
     }
     
     mutating func setOperand(_ operand: Double) {
+        print(operand)
+        updateCalculationSequence(with: String(operand))
         accumulator = operand
-        logCalculationSequenceItem(String(operand))
     }
     
-    mutating func logCalculationSequenceItem(_ item: String) {
+    private mutating func updateCalculationSequence(with item: String) {
+        if lastActionWasEquals {
+            clearLoggedCalculationSequence()
+            lastActionWasEquals = false
+        }
         loggedSequence.append(item)
     }
     
-    mutating func clearLoggedCalculationSequence() {
+    private mutating func clearLoggedCalculationSequence() {
         loggedSequence.removeAll()
     }
     
@@ -101,7 +107,7 @@ struct CalculatorBrain {
         }
     }
     
-    private var description: String {
+    var description: String {
         get {
             var sequence = loggedSequence.joined(separator: " ")
             if resultIsPending {

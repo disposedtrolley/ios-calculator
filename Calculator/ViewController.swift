@@ -11,9 +11,10 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var display: UILabel!
+    @IBOutlet weak var calculationSequence: UILabel!
     
     var userIsInTheMiddleOfTyping = false
-    var floatingPointAdded = false
+    var floatingPointPresent = false
     private var brain = CalculatorBrain()
     
     // Computed Properties
@@ -26,12 +27,21 @@ class ViewController: UIViewController {
         }
     }
     
+    var calculationSequenceValue: String {
+        get {
+            return String(calculationSequence.text!)
+        }
+        set {
+            calculationSequence.text = String(newValue)
+        }
+    }
+    
     @IBAction func addFloatingPoint(_ sender: UIButton) {
         let floatingPoint = sender.currentTitle!
-        if !floatingPointAdded && userIsInTheMiddleOfTyping {
+        if !floatingPointPresent && userIsInTheMiddleOfTyping {
             let textCurrentlyInDisplay = display.text!
             display.text = textCurrentlyInDisplay + floatingPoint
-            floatingPointAdded = true
+            floatingPointPresent = true
         }
     }
     
@@ -50,7 +60,7 @@ class ViewController: UIViewController {
         if userIsInTheMiddleOfTyping {
             brain.setOperand(displayValue)
             userIsInTheMiddleOfTyping = false
-            floatingPointAdded = false
+            floatingPointPresent = false
         }
         if let mathematicalSymbol = sender.currentTitle {
             brain.performOperation(mathematicalSymbol)
@@ -58,5 +68,6 @@ class ViewController: UIViewController {
         if let result = brain.result {
             displayValue = result
         }
+        calculationSequenceValue = brain.description
     }
 }
