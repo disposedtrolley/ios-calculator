@@ -85,14 +85,16 @@ struct CalculatorBrain {
     
     private mutating func updateCalculationSequence(with item: String) {
         if lastActionWasEquals {
-            clearLoggedCalculationSequence()
+            loggedSequence = loggedSequence.filter({ $0 != "=" })
             lastActionWasEquals = false
         }
-        loggedSequence.append(item)
-    }
-    
-    private mutating func clearLoggedCalculationSequence() {
-        loggedSequence.removeAll()
+        if let operation = operations[item], case .unaryOperation = operation {
+            loggedSequence.insert("(", at: 0)
+            loggedSequence.append(")")
+            loggedSequence.insert(item, at: 0)
+        } else {
+            loggedSequence.append(item)
+        }
     }
     
     var result: Double? {
