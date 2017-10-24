@@ -48,7 +48,7 @@ struct CalculatorBrain {
                     accumulator = function(accumulator!)
                 }
             case .binaryOperation(let function):
-                if pendingBinaryOperation != nil && accumulator != nil {
+                if resultIsPending && accumulator != nil {
                     performPendingBinaryOperation()
                 }
                 if accumulator != nil {
@@ -69,7 +69,7 @@ struct CalculatorBrain {
     }
     
     private mutating func performPendingBinaryOperation() {
-        if pendingBinaryOperation != nil && accumulator != nil {
+        if resultIsPending && accumulator != nil {
             accumulator = pendingBinaryOperation!.perform(with: accumulator!)
             pendingBinaryOperation = nil
             lastActionWasEquals = true
