@@ -97,8 +97,8 @@ struct CalculatorBrain {
     }
     
     private mutating func insertParenthesesInSequence(from index1: Int, to index2: Int) {
-        loggedSequence.insert("(", at: index1 - 1)
-        loggedSequence.insert(")", at: index2 + 1)
+        loggedSequence.insert("(", at: index1)
+        loggedSequence.insert(")", at: index2)
     }
     
     var result: Double? {
