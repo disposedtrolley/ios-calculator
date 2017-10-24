@@ -85,16 +85,20 @@ struct CalculatorBrain {
     
     private mutating func updateCalculationSequence(with item: String) {
         if lastActionWasEquals {
-            loggedSequence = loggedSequence.filter({ $0 != "=" })
+            loggedSequence = loggedSequence.filter({ $0 != "=" })   // remove equals sign from the sequence as the operation is continuing
             lastActionWasEquals = false
         }
         if let operation = operations[item], case .unaryOperation = operation {
-            loggedSequence.insert("(", at: 0)
-            loggedSequence.append(")")
-            loggedSequence.insert(item, at: 0)
+            insertParenthesesInSequence(from: 0, to: loggedSequence.count - 1)      // insert parentheses to wrap operands of unary operations
+            loggedSequence.insert(item, at: 0)      // prepend the unary operation
         } else {
             loggedSequence.append(item)
         }
+    }
+    
+    private mutating func insertParenthesesInSequence(from index1: Int, to index2: Int) {
+        loggedSequence.insert("(", at: index1 - 1)
+        loggedSequence.insert(")", at: index2 + 1)
     }
     
     var result: Double? {
