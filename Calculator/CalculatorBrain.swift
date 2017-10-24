@@ -89,7 +89,7 @@ struct CalculatorBrain {
             lastActionWasEquals = false
         }
         if let operation = operations[item], case .unaryOperation = operation {
-            insertParenthesesInSequence(from: 0, to: loggedSequence.count - 1)      // insert parentheses to wrap operands of unary operations
+            insertParenthesesInSequence(from: 0, to: loggedSequence.count + 1)      // insert parentheses to wrap operands of unary operations
             loggedSequence.insert(item, at: 0)      // prepend the unary operation
         } else {
             loggedSequence.append(item)
