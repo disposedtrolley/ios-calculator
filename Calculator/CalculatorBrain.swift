@@ -62,6 +62,7 @@ struct CalculatorBrain {
         accumulator = nil
         loggedSequence = []
         lastActionWasEquals = false
+        pendingBinaryOperation = nil
     }
     
     private mutating func performPendingBinaryOperation() {
