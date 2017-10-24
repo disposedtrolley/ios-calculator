@@ -41,16 +41,25 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="394" height="113.66666666666667"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3K6-8j-WW0" customClass="OperatorButton" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="91" height="113.66666666666667"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="70.666666666666671" height="113.66666666666667"/>
+                                                        <color key="backgroundColor" red="0.94140625" green="0.94140625" blue="0.94140625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <state key="normal" title="C"/>
+                                                        <connections>
+                                                            <action selector="resetCalculator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zeh-Gm-ghg"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Y0-Hx-XIt" customClass="OperatorButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="80.666666666666671" y="0.0" width="71.000000000000014" height="113.66666666666667"/>
                                                         <color key="backgroundColor" red="0.94140625" green="0.94140625" blue="0.94140625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <state key="normal" title="+"/>
                                                         <connections>
-                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z4I-H1-7GC"/>
+                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lMT-De-vJ6"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LL6-bd-RFB" customClass="OperatorButton" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="101" y="0.0" width="91" height="113.66666666666667"/>
+                                                        <rect key="frame" x="161.66666666666666" y="0.0" width="70.666666666666657" height="113.66666666666667"/>
                                                         <color key="backgroundColor" red="0.94140625" green="0.94140625" blue="0.94140625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <state key="normal" title="−"/>
@@ -59,7 +68,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wY5-a1-GfL" customClass="OperatorButton" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="202" y="0.0" width="91" height="113.66666666666667"/>
+                                                        <rect key="frame" x="242.33333333333337" y="0.0" width="71" height="113.66666666666667"/>
                                                         <color key="backgroundColor" red="0.94140625" green="0.94140625" blue="0.94140625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <state key="normal" title="÷"/>
@@ -68,7 +77,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPG-fj-Exr" customClass="OperatorButton" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="303" y="0.0" width="91" height="113.66666666666667"/>
+                                                        <rect key="frame" x="323.33333333333331" y="0.0" width="70.666666666666686" height="113.66666666666667"/>
                                                         <color key="backgroundColor" red="0.94140625" green="0.94140625" blue="0.94140625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <state key="normal" title="×"/>

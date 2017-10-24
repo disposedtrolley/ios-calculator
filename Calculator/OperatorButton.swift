@@ -19,9 +19,12 @@ class OperatorButton: UIButton {
     
     func setButtonColors() {
         var backgroundColor: UIColor
-        if self.currentTitle == "=" {
+        switch self.currentTitle! {
+        case "=":
             backgroundColor = UIColor.flatRed()
-        } else {
+        case "C":
+            backgroundColor = UIColor.flatRed()
+        default:
             backgroundColor = UIColor.flatMint()
         }
         self.backgroundColor = backgroundColor

@@ -58,6 +58,12 @@ struct CalculatorBrain {
         }
     }
     
+    mutating func resetCalculatorBrain() {
+        accumulator = nil
+        loggedSequence = []
+        lastActionWasEquals = false
+    }
+    
     private mutating func performPendingBinaryOperation() {
         if pendingBinaryOperation != nil && accumulator != nil {
             accumulator = pendingBinaryOperation!.perform(with: accumulator!)
@@ -78,7 +84,6 @@ struct CalculatorBrain {
     }
     
     mutating func setOperand(_ operand: Double) {
-        print(operand)
         updateCalculationSequence(with: String(operand))
         accumulator = operand
     }

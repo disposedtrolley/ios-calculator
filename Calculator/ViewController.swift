@@ -18,6 +18,10 @@ class ViewController: UIViewController {
     private var brain = CalculatorBrain()
 
     override func viewDidLoad() {
+        initialiseDisplayValues()
+    }
+    
+    private func initialiseDisplayValues() {
         displayValue = 0
         calculationSequenceValue = " "
     }
@@ -39,6 +43,12 @@ class ViewController: UIViewController {
         set {
             calculationSequence.text = String(newValue)
         }
+    }
+    
+    @IBAction func resetCalculator(_ sender: OperatorButton) {
+        userIsInTheMiddleOfTyping = false
+        brain.resetCalculatorBrain()
+        initialiseDisplayValues()
     }
     
     @IBAction func addFloatingPoint(_ sender: UIButton) {
