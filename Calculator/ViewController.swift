@@ -32,7 +32,7 @@ class ViewController: UIViewController {
             return Double(display.text!)!
         }
         set {
-            display.text = String(newValue)     // newValue is whatever is on the right hand side of the assignment
+            display.text = String(newValue)
         }
     }
     
@@ -41,7 +41,15 @@ class ViewController: UIViewController {
             return String(calculationSequence.text!)
         }
         set {
-            calculationSequence.text = String(newValue)
+            var formattedValue: String
+            if brain.lastActionWasEquals {
+                formattedValue = "\(newValue) ="
+            } else if brain.resultIsPending {
+                formattedValue = "\(newValue) ..."
+            } else {
+                formattedValue = newValue
+            }
+            calculationSequence.text = formattedValue
         }
     }
     

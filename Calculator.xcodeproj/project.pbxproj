@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE4E52001F9F0CC4007EFFBB /* DisplayValueLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4E51FF1F9F0CC4007EFFBB /* DisplayValueLabel.swift */; };
 		AE6216831F9C5F740067E9D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6216821F9C5F740067E9D2 /* AppDelegate.swift */; };
 		AE6216851F9C5F740067E9D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6216841F9C5F740067E9D2 /* ViewController.swift */; };
 		AE6216881F9C5F740067E9D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6216861F9C5F740067E9D2 /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AE4E51FF1F9F0CC4007EFFBB /* DisplayValueLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayValueLabel.swift; sourceTree = "<group>"; };
 		AE62167F1F9C5F740067E9D2 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE6216821F9C5F740067E9D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE6216841F9C5F740067E9D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				AE6216841F9C5F740067E9D2 /* ViewController.swift */,
 				AE6216861F9C5F740067E9D2 /* Main.storyboard */,
 				AEAA79721F9DB0FA00EEB70B /* CalculatorBrain.swift */,
+				AE4E51FF1F9F0CC4007EFFBB /* DisplayValueLabel.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				AEAA79731F9DB0FA00EEB70B /* CalculatorBrain.swift in Sources */,
 				AE6216851F9C5F740067E9D2 /* ViewController.swift in Sources */,
 				AE6216831F9C5F740067E9D2 /* AppDelegate.swift in Sources */,
+				AE4E52001F9F0CC4007EFFBB /* DisplayValueLabel.swift in Sources */,
 				AEAA79751F9DF54800EEB70B /* OperatorButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

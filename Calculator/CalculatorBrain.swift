@@ -11,8 +11,8 @@ import Foundation
 struct CalculatorBrain {
     
     private var accumulator: Double?
-    private var loggedSequence: [String] = []
-    private var lastActionWasEquals = false
+    private var calculationSequence: [String] = []
+    var lastActionWasEquals = false
     
     private enum Operation {
         case constant(Double)   // associated value
@@ -63,7 +63,7 @@ struct CalculatorBrain {
     
     mutating func resetCalculatorBrain() {
         accumulator = nil
-        loggedSequence = []
+        calculationSequence = []
         lastActionWasEquals = false
         pendingBinaryOperation = nil
     }
@@ -93,21 +93,15 @@ struct CalculatorBrain {
     }
     
     private mutating func updateCalculationSequence(with item: String) {
-        if lastActionWasEquals {
-            loggedSequence = loggedSequence.filter({ $0 != "=" })   // remove equals sign from the sequence as the operation is continuing
-            lastActionWasEquals = false
+        if item != "=" {
+            calculationSequence.append(item)
         }
-        if let operation = operations[item], case .unaryOperation = operation {
-            insertParenthesesInSequence(from: 0, to: loggedSequence.count + 1)      // insert parentheses to wrap operands of unary operations
-            loggedSequence.insert(item, at: 0)      // prepend the unary operation
-        } else {
-            loggedSequence.append(item)
-        }
+        if lastActionWasEquals { lastActionWasEquals = false }
     }
     
     private mutating func insertParenthesesInSequence(from index1: Int, to index2: Int) {
-        loggedSequence.insert("(", at: index1)
-        loggedSequence.insert(")", at: index2)
+        calculationSequence.insert("(", at: index1)
+        calculationSequence.insert(")", at: index2)
     }
     
     var result: Double? {
@@ -116,7 +110,7 @@ struct CalculatorBrain {
         }
     }
     
-    private var resultIsPending: Bool {
+    var resultIsPending: Bool {
         get {
             return pendingBinaryOperation != nil
         }
@@ -124,11 +118,7 @@ struct CalculatorBrain {
     
     var description: String {
         get {
-            var sequence = loggedSequence.joined(separator: " ")
-            if resultIsPending {
-                sequence = "\(sequence)  ..."
-            }
-            return sequence
+            return calculationSequence.joined(separator: " ")
         }
     }
 }
