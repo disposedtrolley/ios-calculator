@@ -68,6 +68,17 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func deleteDigit(_ sender: OperatorButton) {
+        if userIsInTheMiddleOfTyping {
+            let currentText = display.text!
+            if currentText.count > 1 {
+                display.text = String(currentText[..<currentText.index(currentText.endIndex, offsetBy: -1)])
+            } else {
+                displayValue = 0
+            }
+        }
+    }
+    
     @IBAction func touchDigit(_ sender: UIButton) {
         let digit = sender.currentTitle!
         if userIsInTheMiddleOfTyping {

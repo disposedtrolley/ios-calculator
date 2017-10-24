@@ -41,7 +41,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="394" height="113.66666666666667"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3K6-8j-WW0" customClass="OperatorButton" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="70.666666666666671" height="113.66666666666667"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="57.333333333333336" height="113.66666666666667"/>
                                                         <color key="backgroundColor" red="0.94140625" green="0.94140625" blue="0.94140625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <state key="normal" title="C"/>
@@ -49,40 +49,49 @@
                                                             <action selector="resetCalculator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zeh-Gm-ghg"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Y0-Hx-XIt" customClass="OperatorButton" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="80.666666666666671" y="0.0" width="71.000000000000014" height="113.66666666666667"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vz1-2H-dri" customClass="OperatorButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="67.333333333333329" y="0.0" width="57.333333333333329" height="113.66666666666667"/>
                                                         <color key="backgroundColor" red="0.94140625" green="0.94140625" blue="0.94140625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="+"/>
+                                                        <state key="normal" title="π"/>
                                                         <connections>
-                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lMT-De-vJ6"/>
+                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vuj-jQ-dFF"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LL6-bd-RFB" customClass="OperatorButton" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="161.66666666666666" y="0.0" width="70.666666666666657" height="113.66666666666667"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9i3-6o-ovu" customClass="OperatorButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="134.66666666666666" y="0.0" width="57.333333333333343" height="113.66666666666667"/>
                                                         <color key="backgroundColor" red="0.94140625" green="0.94140625" blue="0.94140625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="−"/>
+                                                        <state key="normal" title="√"/>
                                                         <connections>
-                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="99F-LS-anH"/>
+                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qbl-cU-9bh"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wY5-a1-GfL" customClass="OperatorButton" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="242.33333333333337" y="0.0" width="71" height="113.66666666666667"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1k-0j-8da" customClass="OperatorButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="202" y="0.0" width="57.333333333333314" height="113.66666666666667"/>
                                                         <color key="backgroundColor" red="0.94140625" green="0.94140625" blue="0.94140625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="÷"/>
+                                                        <state key="normal" title="cos"/>
                                                         <connections>
-                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rJM-Ta-xle"/>
+                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f26-hw-qFr"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPG-fj-Exr" customClass="OperatorButton" customModule="Calculator" customModuleProvider="target">
-                                                        <rect key="frame" x="323.33333333333331" y="0.0" width="70.666666666666686" height="113.66666666666667"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJK-kP-lI2" customClass="OperatorButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="269.33333333333331" y="0.0" width="57.333333333333314" height="113.66666666666667"/>
                                                         <color key="backgroundColor" red="0.94140625" green="0.94140625" blue="0.94140625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="×"/>
+                                                        <state key="normal" title="±"/>
                                                         <connections>
-                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cMh-EX-IrZ"/>
+                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rDa-qN-HxN"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dso-TZ-bQ2" customClass="OperatorButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="336.66666666666669" y="0.0" width="57.333333333333314" height="113.66666666666667"/>
+                                                        <color key="backgroundColor" red="0.94140625" green="0.94140625" blue="0.94140625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <state key="normal" title="Del"/>
+                                                        <connections>
+                                                            <action selector="deleteDigit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CEJ-IU-haF"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -90,13 +99,13 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fCy-hW-i3P">
                                                 <rect key="frame" x="0.0" y="123.66666666666669" width="394" height="113.33333333333331"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vz1-2H-dri" customClass="OperatorButton" customModule="Calculator" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Y0-Hx-XIt" customClass="OperatorButton" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="91" height="113.33333333333333"/>
                                                         <color key="backgroundColor" red="0.94140625" green="0.94140625" blue="0.94140625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="π"/>
+                                                        <state key="normal" title="+"/>
                                                         <connections>
-                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vuj-jQ-dFF"/>
+                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lMT-De-vJ6"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXR-od-nbt">
@@ -131,13 +140,13 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="k2W-1e-xy6">
                                                 <rect key="frame" x="0.0" y="246.99999999999997" width="394" height="113.66666666666666"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9i3-6o-ovu" customClass="OperatorButton" customModule="Calculator" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LL6-bd-RFB" customClass="OperatorButton" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="91" height="113.66666666666667"/>
                                                         <color key="backgroundColor" red="0.94140625" green="0.94140625" blue="0.94140625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="√"/>
+                                                        <state key="normal" title="−"/>
                                                         <connections>
-                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qbl-cU-9bh"/>
+                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="99F-LS-anH"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oaZ-DT-ZVQ">
@@ -172,13 +181,13 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="y7g-H2-Qf1">
                                                 <rect key="frame" x="0.0" y="370.66666666666669" width="394" height="113.33333333333331"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1k-0j-8da" customClass="OperatorButton" customModule="Calculator" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wY5-a1-GfL" customClass="OperatorButton" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="91" height="113.33333333333333"/>
                                                         <color key="backgroundColor" red="0.94140625" green="0.94140625" blue="0.94140625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="cos"/>
+                                                        <state key="normal" title="÷"/>
                                                         <connections>
-                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f26-hw-qFr"/>
+                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rJM-Ta-xle"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8w-t1-F6C">
@@ -213,13 +222,13 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5dD-Xy-vXc">
                                                 <rect key="frame" x="0.0" y="494.00000000000006" width="394" height="113.66666666666669"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJK-kP-lI2" customClass="OperatorButton" customModule="Calculator" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPG-fj-Exr" customClass="OperatorButton" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="91" height="113.66666666666667"/>
                                                         <color key="backgroundColor" red="0.94140625" green="0.94140625" blue="0.94140625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="±"/>
+                                                        <state key="normal" title="×"/>
                                                         <connections>
-                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rDa-qN-HxN"/>
+                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cMh-EX-IrZ"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCe-bG-lD5">

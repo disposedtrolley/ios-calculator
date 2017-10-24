@@ -24,6 +24,8 @@ class OperatorButton: UIButton {
             backgroundColor = UIColor.flatRed()
         case "C":
             backgroundColor = UIColor.flatRed()
+        case "Del":
+            backgroundColor = UIColor.flatRed()
         default:
             backgroundColor = UIColor.flatMint()
         }
