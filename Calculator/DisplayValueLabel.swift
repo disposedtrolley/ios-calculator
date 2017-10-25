@@ -16,6 +16,7 @@ class DisplayValueLabel: UILabel {
         super.init(coder: aDecoder)
         
         formatter.numberStyle = .decimal
+        formatter.minimumFractionDigits = 0
         formatter.maximumFractionDigits = 6
         formatter.groupingSeparator = ""
     }
